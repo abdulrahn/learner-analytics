@@ -1,0 +1,47 @@
+.charts-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  background: var(--mat-toolbar-container-background-color);
+}
+
+.chart-card {
+  //   background: var(--card-bg, #fff);
+
+  border-radius: 12px;
+  padding: 23px;
+  position: relative;
+  height: 90%;
+}
+
+.chart-header {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  position: relative;
+  top: 10%;
+  left: 12%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  pointer-events: none;
+}
+
+.center-text {
+  position: absolute;
+  top: 55%;
+  left: 33%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  pointer-events: none;
+
+  .district {
+    font-size: 12px;
+    font-weight: 600;
+    opacity: 0.8;
+  }
+}
+
+/* Dark mode support */
+:host-context(.dark-theme) {
+  --card-bg: #1e1e1e;
+}

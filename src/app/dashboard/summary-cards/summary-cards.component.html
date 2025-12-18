@@ -1,0 +1,17 @@
+<div class="summary-container">
+
+    <mat-button-toggle-group value="Monthly" *ngFor="let item of stats" class="toggle">
+        <div class="left">
+            <mat-icon class="icon" [ngStyle]="{ color: item.color }">
+                {{ item.icon }}
+            </mat-icon>
+        </div>
+        <div class="content">
+            <span class="label">{{ item.label }}</span>
+            <span class="value" [ngStyle]="{ color: item.color }">
+                {{ item.value }}
+            </span>
+        </div>
+        <div class="indicator" [ngStyle]="{ background: item.color }"></div>
+    </mat-button-toggle-group>
+</div>

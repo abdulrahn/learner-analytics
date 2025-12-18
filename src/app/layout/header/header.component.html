@@ -1,0 +1,30 @@
+<div class="header">
+  <div class="left">
+    <h2>Dashboard</h2>
+  </div>
+  <div class="right">
+    <mat-button-toggle-group value="Monthly" class="toggle">
+      <mat-button-toggle value="Monthly" class="monthly">Monthly</mat-button-toggle>
+      <mat-button-toggle value="Quarterly" class="yearly">Quarterly</mat-button-toggle>
+    </mat-button-toggle-group>
+    <mat-form-field appearance="outline" class="date font-15">
+      <mat-icon matPrefix>calendar_today</mat-icon>
+      <!-- <input matInput readonly value="01 Jan, 2024 - 31 Dec, 2024" /> -->
+      <mat-select [(value)]="selectedDateRange" (selectionChange)="onDateChange($event.value)">
+        <mat-option *ngFor="let date of dateFilter" [value]="date.value">
+          {{ date.value }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="district">
+      <mat-select [(value)]="selectedDistrict">
+        <mat-option *ngFor="let district of districts" [value]="district">
+          {{ district }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-slide-toggle class="slide" [checked]="isDarkMode" (change)="toggleTheme()">
+      Dark
+    </mat-slide-toggle>
+  </div>
+</div>

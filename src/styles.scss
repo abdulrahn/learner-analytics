@@ -1,1 +1,65 @@
-/* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+
+/* Include Material core styles ONCE */
+@include mat.core();
+
+/* ------------------------------------
+   COLOR PALETTES
+------------------------------------ */
+$primary-light: mat.define-palette(mat.$indigo-palette);
+$accent-light: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$warn-light: mat.define-palette(mat.$red-palette);
+
+$primary-dark: mat.define-palette(mat.$deep-purple-palette);
+$accent-dark: mat.define-palette(mat.$cyan-palette);
+$warn-dark: mat.define-palette(mat.$red-palette);
+
+/* ------------------------------------
+   LIGHT THEME
+------------------------------------ */
+$light-theme: mat.define-light-theme((color: (primary: $primary-light,
+        accent: $accent-light,
+        warn: $warn-light,
+      ),
+      typography: mat.define-typography-config(),
+      density: 0));
+
+/* ------------------------------------
+   DARK THEME
+------------------------------------ */
+$dark-theme: mat.define-dark-theme((color: (primary: $primary-dark,
+        accent: $accent-dark,
+        warn: $warn-dark,
+      ),
+      typography: mat.define-typography-config(),
+      density: 0));
+
+/* ------------------------------------
+   APPLY THEMES VIA CSS CLASSES
+------------------------------------ */
+.light-theme {
+  @include mat.all-component-themes($light-theme);
+  background-color: #f5f6fa;
+  color: #000;
+}
+
+.dark-theme {
+  @include mat.all-component-themes($dark-theme);
+  background-color: #121212;
+  color: #fff;
+}
+
+/* ------------------------------------
+   GLOBAL STYLES
+------------------------------------ */
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  // background: var(--mat-toolbar-container-background-color);
+}

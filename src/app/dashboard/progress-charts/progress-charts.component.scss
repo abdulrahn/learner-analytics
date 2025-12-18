@@ -1,0 +1,18 @@
+.card {
+  // background: var(--card-bg, #fff);
+  padding: 16px;
+  border-radius: 8px;
+  height: 90%;
+}
+
+.chart-header {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  position: relative;
+  top: 10%;
+  left: 12%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  pointer-events: none;
+}

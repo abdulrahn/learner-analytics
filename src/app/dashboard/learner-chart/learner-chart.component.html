@@ -1,0 +1,16 @@
+<div class="charts-container">
+  <div class="chart-card">
+    <div class="chart-header">Average assessment score</div>
+    <canvas baseChart [data]="donutChartData" [options]="donutChartOptions" [type]="donutChartType">
+    </canvas>
+    <div class="center-text">
+      <div class="district">All Districts</div>
+    </div>
+  </div>
+
+  <div class="chart-card">
+    <div class="chart-header">Learners Details Breakdown</div>
+    <canvas baseChart [data]="pieChartData" [options]="pieChartOptions" [type]="pieChartType">
+    </canvas>
+  </div>
+</div>

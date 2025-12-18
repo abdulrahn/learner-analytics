@@ -1,0 +1,28 @@
+.card {
+  // background: var(--card-bg);
+  border-radius: 10px;
+  padding: 16px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  background: var(--mat-toolbar-container-background-color);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  margin-bottom: 12px;
+
+}
+
+.rank-btn {
+  border: 1px solid #ccc;
+  padding: 4px 10px;
+  border-radius: 6px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.chart-container {
+  height: 350px;
+}
